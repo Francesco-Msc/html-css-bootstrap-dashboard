@@ -52,7 +52,9 @@
           </nav>
           <!-- /navbar -->
     </header>
-    <main class="mx-auto p-2 mt-3 container">
+    <main class="mx-auto p-2 mt-3 container d-lg-flex">
+      <!-- main content -->
+      <div>
         <!-- page title -->
         <div class="d-flex justify-content-between">
             <h1 class="fs-2 fw-normal">Catalogo Libri</h1>
@@ -156,6 +158,53 @@
               </tr>
             </tbody>
           </table>
+      </div>
+      <div class="mx-4">
+        <div>
+          <!-- check list title -->
+          <div class="border rounded-top p-2 bg-light">Todo</div>
+          <!-- check list content -->
+          <div class="border border-top-0 rounded-bottom p-2 pt-3">
+            <ul class="list-unstyled">
+              <li class="border rounded-top p-2">
+                <input type="checkbox" id="call">
+                <label for="call">Chiamare segreteria</label>
+              </li>
+              <li class="border-start border-end p-2">
+                <input type="checkbox" id="send"> 
+                <label for="send">Mandare avvisi prestiti scaduti</label>
+              </li>
+              <li class="border rounded-bottom p-2">
+                <input type="checkbox" id="order">
+                <label for="order">Ordinare nuovi libri</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <!-- F.A.Q. -->
+          <div class="border rounded-top p-2 bg-light mt-3">F.A.Q.</div>
+          <div class="border border-top-0 rounded-bottom py-3 px-5">
+            <table class="table">
+              <tbody>
+                  <tr>
+                      <td>Come aggiungere un nuovo libro?</td>
+                      <td><i class="fa-solid fa-angle-down"></i></td>
+                  </tr>
+                  <tr>
+                      <td>Come posso accedere all'anagrafica utenti?</td>
+                      <td><i class="fa-solid fa-angle-down"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Posso usare questa dashboard da mobile?</td>
+                    <td><i class="fa-solid fa-angle-down"></i></td>
+                </tr>
+              </tbody>
+          </table>
+          </div>
+          </div>
+        </div>
+      </div>
     </main>
 </body>
 </html>
