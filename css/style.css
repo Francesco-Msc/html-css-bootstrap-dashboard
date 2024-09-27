@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+.noteArea{
+    height: 100px;
+}
+
 @media (min-width: 992px) {
     .faq{
         max-width: 400px;

@@ -11,13 +11,14 @@
     <!-- /Bootstrap -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
-</head>
 <body>
-    <header></header>
+    <header>
         <!-- navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-              <img src="../img/duck.png" width="40" height="40" alt="duck logo">
+              <a href="../index.html">
+                <img src="../img/duck.png" width="40" height="40" alt="duck logo">
+              </a>
               <!-- Bottone Toggle per Mobile -->
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -32,7 +33,7 @@
                 <div class="offcanvas-body">
                   <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                     <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+                      <a class="nav-link" href="../index.html">Catalogo Libri</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" href="#">Anagrafica Utente</a>
@@ -54,32 +55,89 @@
           </nav>
           <!-- /navbar -->
     </header>
-    <main class="mx-auto p-2 mt-3 container">
+    <main class="mx-auto p-3 mt-3 container">
       <h1 class="fs-2 fw-normal mb-3">Nuovo Libro</h1>
-      <div class="container mt-4">
-        <div class="row">
-          <!-- Nome Autore -->
-          <div class="col-6">
-            <div class="mb-3">
-              <label for="AuthorName" class="form-label">Nome Autore</label>
-              <input type="text" class="form-control" id="AuthorName" placeholder="Inserisci il nome dell'autore">
+      <div class="container mt-4 p-0">
+        <form action="#">
+          <div class="row">
+            <!-- Nome Autore -->
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="AuthorName" class="form-label">Nome Autore</label>
+                <input type="text" class="form-control" id="AuthorName" name="name" placeholder="Inserisci il nome dell'autore" required>
+              </div>
+            </div>
+            <!-- Cognome Autore -->
+            <div class="col-6">
+              <div class="mb-3">
+                <label for="AuthorSurname" class="form-label">Cognome Autore</label>
+                <input type="text" class="form-control" id="AuthorSurname" name="surname" placeholder="Inserisci il cognome dell'autore" required>
+              </div>
+            </div>
+            <!-- Titolo Libro -->
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="bookTitle" class="form-label">Titolo</label>
+                <input type="text" class="form-control" id="bookTitle" name="title" placeholder="Inserisci il titolo del libro" required>
+                <div id="titleVersion" class="form-text">Titolo versione italiana</div>
+              </div>
+            </div>
+            <!-- Genere -->
+            <div class="col-12 col-lg-4">
+              <div class="mb-3">
+                <label for="genre" class="form-label">Genere</label>
+                <select class="form-select" id="genre" aria-label="Select genre">
+                  <option value="" class="d-none" selected>Scegli il genere</option>
+                  <option value="1">Narrativa</option>
+                  <option value="2">Fantasy</option>
+                  <option value="3">Fantascienza</option>
+                  <option value="4">Giallo</option>
+                  <option value="5">Horror</option>
+                  <option value="6">Romance</option>
+                  <option value="7">Storico</option>
+                  <option value="8">Biografico</option>
+                  <option value="9">Poesia</option>
+                  <option value="10">Classico</option>
+                </select>
+              </div>
+            </div>
+            <!-- Anno di pubblicazione -->
+            <div class="col-12 col-lg-4">
+              <div class="mb-3">
+                <label for="year" class="form-label">Anno di Pubblicazione</label>
+                <input type="number" class="form-control" id="year" name="year" max="2024" placeholder="Inserisci il l'anno" required>
+              </div>
+            </div>
+            <!-- ISBN -->
+            <div class="col-12 col-lg-4">
+              <div class="mb-3">
+                <label for="isbn" class="form-label">ISBN#</label>
+                <input type="number" class="form-control" id="isbn" name="isbn" placeholder="Inserisci il codice ISBN#" required>
+              </div>
+            </div>
+            <hr>
+            <!-- note -->
+            <div class="col-12">
+              <div class="mb-3">
+                <label for="note" class="form-label">Note</label>
+                <textarea name="note" class="form-control noteArea" id="note" placeholder="Inserisci eventuali note sul libro"></textarea>
+              </div>
+            </div>
+            <!-- Formato -->
+            <div class="col-12">
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="me-1 form-check-input" value="1" name="format" id="format">
+                <label for="format" class="form-check-label">Disponibile anche in digitale</label>
+              </div>
+            </div>
+            <!-- Submit -->
+            <div class="col-12">
+              <div class="mb-2">
+                <button type="submit" class="btn btn-primary">Aggiungi Libro</button>
+              </div>
             </div>
           </div>
-          <!-- Cognome Autore -->
-          <div class="col-6">
-            <div class="mb-3">
-              <label for="AuthorSurname" class="form-label">Cognome Autore</label>
-              <input type="text" class="form-control" id="AuthorSurname" placeholder="Inserisci il cognome dell'autore">
-            </div>
-          </div>
-          <div class="col-12">
-            <div class="mb-3">
-              <label for="bookTitle" class="form-label">Titolo</label>
-              <input type="text" class="form-control" id="bookTitle" placeholder="Inserisci il cognome dell'autore">
-              <div id="titleVersion" class="form-text">Titolo versione italiana</div>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </main>
     <!-- bootstrap js -->
